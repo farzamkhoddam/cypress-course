@@ -13,11 +13,22 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.1",
     "@mui/material": "^5.14.1",
-    "next": "13.4.12",
+    "next": "^13.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
     "cypress": "^13.3.0"
-  }
+  },
+  "description": "This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).",
+  "main": "cypress.config.js",
+  "repository": {
+    "type": "git",
+    "url": "cypress-course"
+  },
+  "keywords": [
+    "cypress"
+  ],
+  "author": "farzam",
+  "license": "ISC"
 }
