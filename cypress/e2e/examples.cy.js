@@ -30,12 +30,20 @@ describe("multi page test", () => {
       .location("pathname")
       .should("equal", "/best-practices");
   });
-  it.only("intercepts", () => {
+  it("intercepts", () => {
     cy.intercept("post", "http://localhost:3000/examples", {
       fixture: "example.json",
-      
     }).as("button-click");
     cy.getDataTest("post-button").click();
     cy.wait("@button-click");
+  });
+  it.only("grudge list check", () => {
+    cy.getDataTest("grudge-input").within(() => {
+      cy.get("input").type("windows is shit for programming");
+    });
+
+    cy.getDataTest("grudge-button").click();
+
+    cy.contains("windows is shit for programming");
   });
 });
